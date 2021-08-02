@@ -1,0 +1,15 @@
+@if (flashMessages.has('alert'))
+  @if(flashMessages.get('alert.type') === 'success')
+    <div class="rounded-md bg-green-50 p-4 text-sm font-medium text-green-800">
+      {{ flashMessages.get('alert.message') }}
+    </div>
+  @elseif(flashMessages.get('alert.type') === 'error')
+    <div class="rounded-md bg-red-50 p-4 text-sm font-medium text-red-800">
+      {{ flashMessages.get('alert.message') }}
+    </div>
+  @elseif(flashMessages.get('alert.type') === 'info')
+    <div class="rounded-md bg-blue-50 p-4 text-sm font-medium text-blue-800">
+      {{ flashMessages.get('alert.message') }}
+    </div>
+  @endif
+@endif
